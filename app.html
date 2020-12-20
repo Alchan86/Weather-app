@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <title>Weather app</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="search-info">
+                    <div class="remove-location-wrapper">
+                        <div id="remove-location" onclick="document.getElementById('location').value = ''">
+                            <!--<span class="remove-icon">
+                                <img src="./img/close.svg">
+                            </span>-->
+                            <span class="location-name"></span>
+                        </div>
+                    </div>
+                    <div class="title-search-wrapper">
+                        <h1>
+                            <span>select a location to display</span>
+                            weather data!
+                        </h1>
+                        <div class="search-wrapper">
+                            <form id="input-location" name="inputLocation">
+                                <input type="text" id="location" placeholder="Select location" />
+                                <button class="search-icon">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="search-sun">
+                            <img src="./img/search-sun.svg" />
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="actual-weather">
+                            <span class="selected-day"></span>
+                            <div class="courrent-temperature">
+                                <i id="wicon-main" class="wi wi-main"></i>
+                                <span id="temperature"></span>
+                                <span id="city-name"></span>
+                            </div>
+                        </div>
+                        <div class="days-wrapper">
+                            <div class="days-box">
+                                <div class="day-col">
+                                    <div class="day-col-content" id="one">
+                                        <p class="weather">
+                                            <i class="wi"></i>
+                                        </p>
+                                        <p class="temperature">
+                                            <span class="d-main-temp"></span>
+                                        </p>
+                                        <p class="day"></p>
+                                    </div>
+                                </div>
+                                <div class="day-col">
+                                    <div class="day-col-content" id="two">
+                                        <p class="weather">
+                                            <i class="wi"></i>
+                                        </p>
+                                        <p class="temperature">
+                                            <span class="d-main-temp"></span>
+                                        </p>
+                                        <p class="day"></p>
+                                    </div>
+                                </div>
+                                <div class="day-col">
+                                    <div class="day-col-content" id="three">
+                                        <p class="weather">
+                                            <i class="wi"></i>
+                                        </p>
+                                        <p class="temperature">
+                                            <span class="d-main-temp"></span>
+                                        </p>
+                                        <p class="day"></p>
+                                    </div>
+                                </div>
+                                <div class="day-col">
+                                    <div class="day-col-content" id="four">
+                                        <p class="weather">
+                                            <i class="wi"></i>
+                                        </p>
+                                        <p class="temperature">
+                                            <span class="d-main-temp"></span>
+                                        </p>
+                                        <p class="day"></p>
+                                    </div>
+                                </div>
+                                <div class="day-col">
+                                    <div class="day-col-content" id="five">
+                                        <p class="weather">
+                                            <i class="wi"></i>
+                                        </p>
+                                        <p class="temperature">
+                                            <span class="d-main-temp"></span>
+                                        </p>
+                                        <p class="day"></p>
+                                    </div>
+                                </div>
+                                <div class="day-col">
+                                    <div class="day-col-content" id="six">
+                                        <p class="weather">
+                                            <i class="wi"></i>
+                                        </p>
+                                        <p class="temperature">
+                                            <span class="d-main-temp"></span>
+                                        </p>
+                                        <p class="day"></p>
+                                    </div>
+                                </div>
+                                <div class="day-col">
+                                    <div class="day-col-content" id="six">
+                                        <p class="weather">
+                                            <i class="wi"></i>
+                                        </p>
+                                        <p class="temperature">
+                                            <span class="d-main-temp"></span>
+                                        </p>
+                                        <p class="day"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="weather-bg"></div>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://kit.fontawesome.com/e3357deda2.js" crossorigin="anonymous"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>

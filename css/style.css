@@ -1,0 +1,900 @@
+/*Global mixins*/
+/*Screen sizes*/
+/*
+Loading css animation by tobias ahlin. http://tobiasahlin.com/spinkit/
+Weather icons by erik flowers. https://erikflowers.github.io/weather-icons/
+*/
+/*FONTS*/
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* devanagari */
+@font-face {
+  font-family: 'Rozha One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rozhaone/v8/AlZy_zVFtYP12Zncg2kRc335bB0.woff2) format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Rozha One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rozhaone/v8/AlZy_zVFtYP12Zncg2kRfH35bB0.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Rozha One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rozhaone/v8/AlZy_zVFtYP12Zncg2kRcn35.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+/*colors*/
+/*fonts*/
+/*titles*/
+h1 {
+  font-size: 3rem;
+  line-height: 1.8;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  color: #5594C1;
+}
+
+h1 span {
+  font-size: 1.5rem;
+  line-height: 34.08px;
+  font-family: "Rozha One", serif;
+  color: #5594C1;
+}
+
+body {
+  position: relative;
+  background: #E5E5E5;
+  font-family: "Oswald", sans-serif;
+  height: 100vh;
+}
+
+body .weather-bg.sun-bg {
+  max-height: 85vh;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+body .weather-bg.sun-bg:before {
+  content: url("../img/sun-bg.svg") !important;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+body .weather-bg.cloud-bg {
+  max-height: 85vh;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+body .weather-bg.cloud-bg:before {
+  content: url("../img/cloud-bg.svg");
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+body .weather-bg.rain-bg {
+  max-height: 85vh;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+body .weather-bg.rain-bg:before {
+  content: url("../img/rain-bg.svg");
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+body .weather-bg.storm-bg {
+  max-height: 85vh;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+body .weather-bg.storm-bg:before {
+  content: url("../img/storm-bg.svg");
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+body .weather-bg.snow-bg {
+  max-height: 85vh;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+body .weather-bg.snow-bg:before {
+  content: url("../img/snow-bg.svg");
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+.search-info {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0px;
+  right: 0px;
+}
+
+.search-info .remove-location-wrapper {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-info .remove-location-wrapper #remove-location {
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 320px;
+  display: none;
+}
+
+.search-info .remove-location-wrapper #remove-location .location-name {
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #5594C1;
+  font-family: "Rozha One", serif;
+  font-size: 1.5rem;
+  line-height: 3;
+  position: relative;
+}
+
+.search-info .remove-location-wrapper #remove-location .location-name:before {
+  position: absolute;
+  content: url("../img/close.svg");
+  width: 30px;
+  height: 30px;
+  top: 6px;
+  line-height: 2.2;
+  padding: 0 0 0 2px;
+  margin-left: -45px;
+  border: 2px solid #F2F2F2;
+  -webkit-box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+          box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.search-info .title-search-wrapper {
+  position: relative;
+}
+
+.search-info .title-search-wrapper h1, .search-info .title-search-wrapper span {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.search-info .title-search-wrapper .search-wrapper {
+  float: left;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location {
+  margin: 0 auto;
+  max-width: 300px;
+  width: 100%;
+  float: left;
+  border-radius: 10px;
+  -webkit-box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+          box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location input {
+  height: 60px;
+  float: left;
+  width: calc(100% - 40px);
+  border: 0px;
+  padding: 13px 22px;
+  color: #5594C1;
+  background: transparent;
+  font-family: "Rozha One", serif;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location ::-webkit-input-placeholder {
+  color: #5594C1 !important;
+  font-family: "Rozha One", serif;
+  font-size: 1.5rem;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location :-ms-input-placeholder {
+  color: #5594C1 !important;
+  font-family: "Rozha One", serif;
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location ::-ms-input-placeholder {
+  color: #5594C1 !important;
+  font-family: "Rozha One", serif;
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location ::placeholder {
+  color: #5594C1 !important;
+  font-family: "Rozha One", serif;
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location .search-icon {
+  float: left;
+  width: 40px;
+  line-height: 60px;
+  border: none;
+  background: transparent;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location .search-icon i {
+  color: #5594C1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-info .title-search-wrapper .search-wrapper #input-location .search-icon:hover i {
+  font-size: 1.6rem;
+}
+
+.search-info .title-search-wrapper .search-sun {
+  position: absolute;
+  right: 0vw;
+  top: -80px;
+  z-index: -1;
+  -webkit-animation-name: search-sun;
+          animation-name: search-sun;
+  width: 320px;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.search-info .title-search-wrapper .search-sun img, .search-info .title-search-wrapper .search-sun svg {
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+@-webkit-keyframes search-sun {
+  0% {
+    width: 320px;
+  }
+  50% {
+    width: 340px;
+  }
+  100% {
+    width: 360px;
+  }
+}
+
+@keyframes search-sun {
+  0% {
+    width: 320px;
+  }
+  50% {
+    width: 340px;
+  }
+  100% {
+    width: 360px;
+  }
+}
+
+.search-info .actual-weather {
+  float: left;
+  width: 100%;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.search-info .actual-weather .courrent-temperature .wi-rain:before, .search-info .actual-weather .courrent-temperature .wi-rain-mix:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-rain:before, .search-info .actual-weather .courrent-temperature .wi-showers:before {
+  background-image: url("../img/rain.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 187px;
+  width: 300px;
+  height: 187px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .courrent-temperature .wi-snow:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-snow:before {
+  background-image: url("../img/snow.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 213px;
+  width: 300px;
+  height: 313px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .courrent-temperature .wi-sunny:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-sunny:before, .search-info .actual-weather .courrent-temperature .wi-cloudy.wi-sunny:before {
+  background-image: url("../img/sun.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 307px;
+  width: 300px;
+  height: 307px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .courrent-temperature .wi-cloudy:before, .search-info .actual-weather .courrent-temperature .wi-fog:before {
+  background-image: url("../img/cloud.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 109px;
+  width: 300px;
+  height: 109px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .courrent-temperature .wi-storm:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-storm:before {
+  background-image: url("../img/storm.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 226px;
+  width: 300px;
+  height: 226px;
+  display: inline-block;
+}
+
+.search-info .actual-weather #temperature {
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 142.27px;
+  color: #5594C1;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+}
+
+.search-info .actual-weather .selected-day {
+  float: left;
+  width: 100%;
+}
+
+.search-info .actual-weather .selected-day .day-col-content {
+  /*display:none;*/
+}
+
+.search-info .actual-weather .selected-day .day-col-content .temperature span {
+  font-family: "Oswald", sans-serif;
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 142.27px;
+  color: #5594C1;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+}
+
+.search-info .actual-weather .selected-day .day-col-content .day {
+  display: block;
+  font-family: "Rozha One", serif;
+  font-size: 1.5rem;
+  line-height: 34.08px;
+  color: #5594C1;
+}
+
+.search-info .actual-weather .selected-day .day-col-content .weather {
+  min-height: 200px;
+}
+
+.search-info .actual-weather .selected-day .day-col-content .weather .wi-rain:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-rain-mix:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-rain:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-showers:before {
+  background-image: url("../img/rain.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 187px;
+  width: 300px;
+  height: 187px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .selected-day .day-col-content .weather .wi-snow:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-snow:before {
+  background-image: url("../img/snow.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 213px;
+  width: 300px;
+  height: 213px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .selected-day .day-col-content .weather .wi-sunny:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-sunny:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-cloudy.wi-sunny:before {
+  background-image: url("../img/sun.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 307px;
+  width: 300px;
+  height: 307px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .selected-day .day-col-content .weather .wi-cloudy:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog:before {
+  background-image: url("../img/cloud.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 109px;
+  width: 300px;
+  height: 109px;
+  display: inline-block;
+}
+
+.search-info .actual-weather .selected-day .day-col-content .weather .wi-storm:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-storm:before {
+  content: url("../img/storm.png");
+  background-repeat: no-repeat;
+  content: "";
+  background-size: 300px 226px;
+  width: 300px;
+  height: 226px;
+}
+
+.search-info .days-wrapper {
+  float: left;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.search-info .days-wrapper .days-box {
+  float: left;
+  width: 100%;
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  opacity: 0;
+}
+
+.search-info .days-wrapper .days-box .day-col {
+  float: left;
+  min-width: 130px;
+  min-height: 130px;
+  position: relative;
+  margin: 0 10px 10px;
+  text-align: center;
+  border: 1px solid #CFCFCF;
+  background: rgba(242, 242, 242, 0.5);
+  border-radius: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.search-info .days-wrapper .days-box .day-col .day-col-content {
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.search-info .days-wrapper .days-box .day-col .day-col-content p {
+  margin: 0 0 12px;
+}
+
+.search-info .days-wrapper .days-box .day-col .day-col-content p.temperature span {
+  font-size: 1.5rem;
+  color: #5594C1;
+}
+
+.search-info .days-wrapper .days-box .day-col .day-col-content .day {
+  display: none;
+}
+
+.search-info .days-wrapper .days-box .day-col .day-col-content i {
+  color: #5594C1;
+  font-size: 2.375rem;
+}
+
+.search-info .days-wrapper .days-box .day-col .day-col-content i.wi-sunny:before {
+  content: "\f00d";
+}
+
+.search-info .days-wrapper .days-box .day-col:focus, .search-info .days-wrapper .days-box .day-col:hover, .search-info .days-wrapper .days-box .day-col.selected {
+  -webkit-box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+          box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+}
+
+@media (min-width: 768px) {
+  .search-info .title-search-wrapper .search-wrapper #input-location {
+    max-width: 396px;
+  }
+  .search-info .title-search-wrapper .search-sun {
+    right: 14vw;
+    top: -80px;
+    -webkit-animation-name: search-sun;
+            animation-name: search-sun;
+    width: 320px;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-rain:before, .search-info .actual-weather .courrent-temperature .wi-rain-mix:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-rain:before, .search-info .actual-weather .courrent-temperature .wi-showers:before {
+    background-size: 380px 237px;
+    width: 380px;
+    height: 237px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-snow:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-snow:before {
+    background-size: 380px 270px;
+    width: 380px;
+    height: 270px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-sunny:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-sunny:before, .search-info .actual-weather .courrent-temperature .wi-cloudy.wi-sunny:before {
+    background-size: 316px 320px;
+    width: 316px;
+    height: 320px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-cloudy:before, .search-info .actual-weather .courrent-temperature .wi-fog:before {
+    background-size: 380px 139px;
+    width: 380px;
+    height: 139px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-storm:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-storm:before {
+    background-size: 380px 286px;
+    width: 380px;
+    height: 286px;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather {
+    min-height: 280px;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-rain:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-rain-mix:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-rain:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-showers:before {
+    background-size: 380px 237px;
+    width: 380px;
+    height: 237px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-snow:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-snow:before {
+    background-size: 380px 270px;
+    width: 380px;
+    height: 270px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-sunny:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-sunny:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-cloudy.wi-sunny:before {
+    background-size: 316px 320px;
+    width: 316px;
+    height: 320px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-cloudy:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog:before {
+    background-size: 380px 139px;
+    width: 380px;
+    height: 139px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-storm:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-storm:before {
+    background-size: 380px 286px;
+    width: 380px;
+    height: 286px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .search-info .title-search-wrapper .search-sun {
+    right: 20vw;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-rain:before, .search-info .actual-weather .courrent-temperature .wi-rain-mix:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-rain:before, .search-info .actual-weather .courrent-temperature .wi-showers:before {
+    background-size: 520px 325px;
+    width: 520px;
+    height: 325px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-snow:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-snow:before {
+    background-size: 520px 396px;
+    width: 520px;
+    height: 396px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-sunny:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-sunny:before, .search-info .actual-weather .courrent-temperature .wi-cloudy.wi-sunny:before {
+    background-size: 316px 320px;
+    width: 316px;
+    height: 320px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-cloudy:before, .search-info .actual-weather .courrent-temperature .wi-fog:before {
+    background-size: 520px 190px;
+    width: 520px;
+    height: 190px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .courrent-temperature .wi-storm:before, .search-info .actual-weather .courrent-temperature .wi-fog.wi-storm:before {
+    background-size: 520px 391px;
+    width: 520px;
+    height: 391px;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather {
+    min-height: 380px;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-rain:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-rain-mix:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-rain:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-showers:before {
+    background-size: 520px 325px;
+    width: 520px;
+    height: 325px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-snow:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-snow:before {
+    background-size: 520px 396px;
+    width: 520px;
+    height: 396px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-sunny:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-sunny:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-cloudy.wi-sunny:before {
+    background-size: 316px 320px;
+    width: 316px;
+    height: 320px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-cloudy:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog:before {
+    background-size: 520px 190px;
+    width: 520px;
+    height: 190px;
+    display: inline-block;
+  }
+  .search-info .actual-weather .selected-day .day-col-content .weather .wi-storm:before, .search-info .actual-weather .selected-day .day-col-content .weather .wi-fog.wi-storm:before {
+    background-size: 520px 391px;
+    width: 520px;
+    height: 391px;
+  }
+  .search-info .days-wrapper .days-box {
+    overflow-x: inherit;
+  }
+}
+
+@media (min-width: 1480px) {
+  .search-info .days-wrapper .days-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

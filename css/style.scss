@@ -1,0 +1,608 @@
+/*Global mixins*/
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+		-ms-border-radius: $radius;
+			border-radius: $radius;
+  }
+  
+  @mixin animation($easyanim) {
+	  -webkit-transition: $easyanim; 
+		 -moz-transition: $easyanim;
+		   -o-transition: $easyanim; 
+		  -ms-transition: $easyanim;
+			  transition: $easyanim;
+  }
+  
+@mixin rotate($rotate) {
+	-webkit-transform: rotate($rotate);
+		-moz-transform: rotate($rotate);
+		-o-transform: rotate($rotate);
+		-ms-transform: rotate($rotate);
+			transform: rotate($rotate); 
+}
+
+/*Screen sizes*/
+$mobile: "(min-width: 480px)";
+$tablet: "(min-width: 768px)";
+$desktop: "(min-width: 992px)";
+$large: "(min-width: 1200px)";
+$huge: "(min-width: 1480px)";
+
+/*
+Loading css animation by tobias ahlin. http://tobiasahlin.com/spinkit/
+Weather icons by erik flowers. https://erikflowers.github.io/weather-icons/
+*/
+
+/*FONTS*/			
+/* cyrillic-ext */
+@font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format('woff2');
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format('woff2');
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format('woff2');
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* cyrillic-ext */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752FD8Ghe4.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752HT8Ghe4.woff2) format('woff2');
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fj8Ghe4.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752Fz8Ghe4.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Oswald';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/oswald/v35/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  /* devanagari */
+@font-face {
+	font-family: 'Rozha One';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/rozhaone/v8/AlZy_zVFtYP12Zncg2kRc335bB0.woff2) format('woff2');
+	unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Rozha One';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/rozhaone/v8/AlZy_zVFtYP12Zncg2kRfH35bB0.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Rozha One';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/rozhaone/v8/AlZy_zVFtYP12Zncg2kRcn35.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+
+*:focus {outline:none !important}
+
+  /*colors*/
+  $mainBg:#E5E5E5;
+  $mainBg2:rgba(242, 242, 242, 0.50);
+  $blue:#5594C1;
+  $black:#000000;
+  $white:#ffffff;
+  $border:#CFCFCF;
+  $border2:#F2F2F2;
+
+  /*fonts*/
+  $fontR:'Rozha One', serif;
+  $fontO:'Oswald', sans-serif;
+
+
+  /*titles*/
+  h1 {font-size: 3rem; line-height:1.8; font-weight: 500; font-family: $fontO; color:$blue;
+	  span {font-size:1.5rem;line-height:34.08px; font-family: $fontR; color:$blue}
+  }
+
+
+   body {position: relative;background: $mainBg;font-family: $fontO;height:100vh;
+	.weather-bg {
+		&.sun-bg {max-height: 85vh;position: absolute; bottom:0px; right:0px; z-index:-1;
+			&:before {
+				content:url('../img/sun-bg.svg') !important;
+				filter: blur(8px);
+			}
+		}
+		&.cloud-bg {max-height: 85vh; position: absolute; bottom:0px; right:0px; z-index:-1;
+			&:before {
+				content:url('../img/cloud-bg.svg');
+				filter: blur(8px)
+			}
+		}
+		&.rain-bg {max-height: 85vh; position: absolute; bottom:0px; right:0px; z-index:-1;
+			&:before {
+				content:url('../img/rain-bg.svg');
+				filter: blur(8px)
+			}
+		}
+		&.storm-bg {max-height: 85vh; position: absolute; bottom:0px; right:0px; left:0px; z-index:-1;
+			&:before {
+				content:url('../img/storm-bg.svg');
+				filter: blur(8px)
+			}
+		}
+		&.snow-bg {max-height: 85vh; position: absolute; bottom:0px; left:0px; z-index:-1;
+			&:before {
+				content:url('../img/snow-bg.svg');
+				filter: blur(8px)
+			}
+		}
+	}
+  }	
+  
+
+  .search-info {position: absolute; margin: 0;top: 50%;-ms-transform: translateY(-50%);transform: translateY(-50%); left:0px; right:0px;
+	.remove-location-wrapper {text-align: center;display: flex;
+		#remove-location {float:left; width:100%;margin: 0 auto;max-width: 320px;display:none;
+			.location-name {float:left;width:100%; text-align: center; color:$blue; font-family: $fontR; font-size: 1.5rem; line-height:3; position: relative;
+				&:before {position: absolute; content:url('../img/close.svg'); width:30px; height: 30px;  top:6px; line-height: 2.2; padding:0 0 0 2px; margin-left:-45px; border:2px solid $border2; box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+					border-radius: 10px; cursor: pointer;}
+			}
+		}  
+	}
+	.title-search-wrapper {position: relative;
+		h1, span {float:left; width:100%; text-align:center}
+		.search-wrapper {float: left; width: 100%;text-align: center; display: flex; margin-top:60px;
+			#input-location {margin:0 auto;max-width: 300px; width:100%; float: left; border-radius: 10px; box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);
+				
+				input {height: 60px; float:left; width:calc(100% - 40px); border:0px; padding: 13px 22px; color:$blue; background:transparent; font-family: $fontR; font-size:1.5rem; text-transform: capitalize; }
+					::-webkit-input-placeholder {color:$blue !important; font-family: $fontR; font-size:1.5rem;}
+					:-moz-placeholder {color:$blue !important; font-family: $fontR; font-size:1.5rem;opacity:1;}
+					::-moz-placeholder {color:$blue !important; font-family: $fontR; font-size:1.5rem;opacity:1;}
+					:-ms-input-placeholder {color:$blue !important; font-family: $fontR; font-size:1.5rem; opacity:1;}
+					::-ms-input-placeholder {color:$blue !important; font-family: $fontR; font-size:1.5rem;opacity:1;}
+					::placeholder {color:$blue !important; font-family: $fontR; font-size:1.5rem; opacity:1;}
+				
+				.search-icon {float:left; width:40px; line-height: 60px; border:none; background:transparent;
+					i {color:$blue; @include animation(all 0.2s ease-in-out);}
+					&:hover {
+						i {font-size: 1.6rem;}
+					}
+				}
+			}
+		}
+		.search-sun {position: absolute; right:0vw; top:-80px; z-index: -1; animation-name: search-sun; width:320px;animation-duration: 4s;animation-timing-function: ease-in-out;animation-delay: 0;animation-iteration-count: infinite;animation-direction: alternate;
+			img, svg {filter: blur(8px)}
+		}
+		@keyframes search-sun {
+			0% {
+			  width:320px;
+			}
+			
+			50% {
+			  width:340px
+			}
+			
+			100% {
+			  width:360px;
+			}
+		}
+	}
+	
+	.actual-weather {float:left; width:100%; margin-bottom: 100px; text-align: center;
+		.courrent-temperature {
+			.wi-rain, .wi-rain-mix, .wi-fog.wi-rain, .wi-showers  {
+				&:before {
+					background-image: url('../img/rain.png'); background-repeat:no-repeat; content:""; background-size:300px 187px; width:300px; height:187px; display:inline-block;
+				}	
+			}
+			.wi-snow, .wi-fog.wi-snow {
+				&:before {
+					background-image: url('../img/snow.png'); background-repeat:no-repeat; content:""; background-size:300px 213px; width:300px; height:313px; display:inline-block;
+				}	
+			}
+			.wi-sunny, .wi-fog.wi-sunny,  .wi-cloudy.wi-sunny {
+				&:before {
+					background-image: url('../img/sun.png'); background-repeat:no-repeat; content:""; background-size:300px 307px; width:300px; height:307px; display:inline-block;
+				}	
+			}
+			.wi-cloudy, .wi-fog  {
+				&:before {
+					background-image: url('../img/cloud.png'); background-repeat:no-repeat; content:""; background-size:300px 109px; width:300px; height:109px; display:inline-block;
+				}	
+			}
+			.wi-storm, .wi-fog.wi-storm {
+				&:before {
+					background-image: url('../img/storm.png'); background-repeat:no-repeat; content:""; background-size:300px 226px; width:300px; height:226px; display:inline-block;
+				}	
+			}
+		}
+		#temperature {float:left; width:100%; text-align:center; font-family:$fontO;font-size: 6rem; font-weight:300; line-height: 142.27px; color:$blue; text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset:6px;}
+		.selected-day{float:left; width:100%;
+			.day-col-content {/*display:none;*/
+				.temperature {
+					span {font-family:$fontO;font-size: 6rem; font-weight:300; line-height: 142.27px; color:$blue; text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset:6px;}
+				}
+				.day {display:block; font-family:$fontR; font-size: 1.5rem; line-height:34.08px; color:$blue;}
+				.weather {min-height:200px;
+					.wi-rain, .wi-rain-mix, .wi-fog.wi-rain, .wi-showers  {
+						&:before {
+							background-image: url('../img/rain.png'); background-repeat:no-repeat; content:""; background-size:300px 187px; width:300px; height:187px; display:inline-block;
+						}	
+					}
+					.wi-snow, .wi-fog.wi-snow {
+						&:before {
+							background-image: url('../img/snow.png'); background-repeat:no-repeat; content:""; background-size:300px 213px; width:300px; height:213px; display:inline-block;
+						}	
+					}
+					.wi-sunny, .wi-fog.wi-sunny,  .wi-cloudy.wi-sunny {
+						&:before {
+							background-image: url('../img/sun.png'); background-repeat:no-repeat; content:""; background-size:300px 307px; width:300px; height:307px; display:inline-block;
+						}	
+					}
+					.wi-cloudy, .wi-fog  {
+						&:before {
+							background-image: url('../img/cloud.png'); background-repeat:no-repeat; content:""; background-size:300px 109px; width:300px; height:109px; display:inline-block;
+						}	
+					}
+					.wi-storm, .wi-fog.wi-storm {
+						&:before {
+							content: url('../img/storm.png'); background-repeat:no-repeat; content:""; background-size:300px 226px; width:300px; height:226px;
+						}	
+					}
+				}
+			}		
+		}		    
+	}
+	   
+	
+	.days-wrapper {float: left;width: 100%;overflow-x: hidden;
+		.days-box { float:left; width:100%;overflow-x: scroll;display: flex;justify-content: space-between; opacity: 0;
+			.day-col {float:left;min-width: 130px;min-height:130px;position:relative;margin: 0 10px 10px;text-align: center; border:1px solid $border; background:$mainBg2; border-radius: 10px; @include animation(all 0.4s ease-in-out); cursor: pointer;
+				 .day-col-content {width:100%;position: absolute; margin: 0;top: 50%;-ms-transform: translateY(-50%);transform: translateY(-50%);
+					p {margin:0 0 12px;
+						&.temperature {
+							span {font-size: 1.5rem; color:$blue;}
+						}
+					} 
+					.day {display:none}
+					i {color:$blue; font-size:2.375rem;
+						&.wi-sunny {
+							&:before {content: "\f00d";}
+						}
+					}
+				 }
+			 &:focus, &:hover, &.selected {box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.45), 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset 5px 5px 10px -2px rgba(0, 0, 0, 0.25), inset -10px -10px 10px rgba(255, 255, 255, 0.45);} 
+			 }
+		}
+	}
+
+  }
+	
+
+  
+
+@media #{$tablet} {
+
+	.search-info {
+		.title-search-wrapper {
+			.search-wrapper {
+				#input-location {max-width:396px;}
+			}
+			.search-sun {right:14vw; top:-80px; animation-name: search-sun; width:320px;}
+		}
+
+		.actual-weather {
+			.courrent-temperature {
+				.wi-rain, .wi-rain-mix, .wi-fog.wi-rain, .wi-showers  {
+					&:before {
+						background-size:380px 237px; width:380px; height:237px; display:inline-block;
+					}	
+				}
+				.wi-snow, .wi-fog.wi-snow {
+					&:before {
+						background-size:380px 270px; width:380px; height:270px; display:inline-block;
+					}	
+				}
+				.wi-sunny, .wi-fog.wi-sunny,  .wi-cloudy.wi-sunny {
+					&:before {
+						background-size:316px 320px; width:316px; height:320px; display:inline-block;
+					}	
+				}
+				.wi-cloudy, .wi-fog  {
+					&:before {
+						background-size:380px 139px; width:380px; height:139px; display:inline-block;
+					}	
+				}
+				.wi-storm, .wi-fog.wi-storm {
+					&:before {
+						background-size:380px 286px; width:380px; height:286px;
+					}	
+				}
+			}
+			.selected-day{
+				.day-col-content {
+					.weather {min-height:280px;
+						.wi-rain, .wi-rain-mix, .wi-fog.wi-rain, .wi-showers  {
+							&:before {
+								background-size:380px 237px; width:380px; height:237px; display:inline-block;
+							}	
+						}
+						.wi-snow, .wi-fog.wi-snow {
+							&:before {
+								background-size:380px 270px; width:380px; height:270px; display:inline-block;
+							}	
+						}
+						.wi-sunny, .wi-fog.wi-sunny,  .wi-cloudy.wi-sunny {
+							&:before {
+								background-size:316px 320px; width:316px; height:320px; display:inline-block;
+							}	
+						}
+						.wi-cloudy, .wi-fog  {
+							&:before {
+								background-size:380px 139px; width:380px; height:139px; display:inline-block;
+							}	
+						}
+						.wi-storm, .wi-fog.wi-storm {
+							&:before {
+								background-size:380px 286px; width:380px; height:286px;
+							}	
+						}
+					}
+				}		
+			}		   
+		}	
+	}
+}
+
+@media #{$desktop} {
+
+
+}
+
+@media #{$large} {
+
+	.search-info {
+		.title-search-wrapper {
+			.search-sun {right:20vw;}
+		}
+		.actual-weather {
+			.courrent-temperature {
+				.wi-rain, .wi-rain-mix, .wi-fog.wi-rain, .wi-showers  {
+					&:before {
+						background-size:520px 325px; width:520px; height:325px; display:inline-block;
+					}	
+				}
+				.wi-snow, .wi-fog.wi-snow {
+					&:before {
+						background-size:520px 396px; width:520px; height:396px; display:inline-block;
+					}	
+				}
+				.wi-sunny, .wi-fog.wi-sunny,  .wi-cloudy.wi-sunny {
+					&:before {
+						background-size:316px 320px; width:316px; height:320px; display:inline-block;
+					}	
+				}
+				.wi-cloudy, .wi-fog  {
+					&:before {
+						background-size:520px 190px; width:520px; height:190px; display:inline-block;
+					}	
+				}
+				.wi-storm, .wi-fog.wi-storm {
+					&:before {
+						background-size:520px 391px; width:520px; height:391px;
+					}	
+				}
+			}
+			.selected-day{
+				.day-col-content {
+					.weather {min-height:380px;
+						.wi-rain, .wi-rain-mix, .wi-fog.wi-rain, .wi-showers  {
+							&:before {
+								background-size:520px 325px; width:520px; height:325px; display:inline-block;
+							}	
+						}
+						.wi-snow, .wi-fog.wi-snow {
+							&:before {
+								background-size:520px 396px; width:520px; height:396px; display:inline-block;
+							}	
+						}
+						.wi-sunny, .wi-fog.wi-sunny,  .wi-cloudy.wi-sunny {
+							&:before {
+								background-size:316px 320px; width:316px; height:320px; display:inline-block;
+							}	
+						}
+						.wi-cloudy, .wi-fog  {
+							&:before {
+								background-size:520px 190px; width:520px; height:190px; display:inline-block;
+							}	
+						}
+						.wi-storm, .wi-fog.wi-storm {
+							&:before {
+								background-size:520px 391px; width:520px; height:391px;
+							}	
+						}
+					}
+				}		
+			}		
+		}
+		.days-wrapper {
+			.days-box {overflow-x:inherit;}
+		}
+	}
+
+}
+
+
+@media #{$huge} {
+
+	.search-info {
+		.days-wrapper {
+			.days-box {justify-content: center;}
+		}
+	}
+
+}
+		
